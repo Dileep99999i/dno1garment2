@@ -3,46 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Shop Name</title>
+    <title>Heritage Threads | Tando Ghulām Ali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; margin: 0; color: #333; line-height: 1.6; }
-        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
-        section { padding: 2rem; max-width: 800px; margin: auto; }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; }
-        .gallery img { width: 100%; border-radius: 8px; }
-        footer { background: #f4f4f4; padding: 1rem; text-align: center; font-size: 0.9rem; }
+        body { font-family: 'Inter', sans-serif; background-color: #FDFCF8; color: #1B1B1B; }
+        h1, h2, h3 { font-family: 'Cormorant Garamond', serif; }
+        .bg-cream { background-color: #F5F5DC; }
+        .text-olive { color: #556B2F; }
+        .bg-olive { background-color: #556B2F; }
+        .bg-ink { background-color: #1B1B1B; }
+        .fade-in { animation: fadeIn 1.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to [Shop Name]</h1>
-        <p>Quality goods since [Year]</p>
-    </header>
+    <nav class="p-6 flex justify-between items-center border-b border-gray-200">
+        <div class="text-2xl font-bold tracking-widest uppercase">Heritage</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#about" class="hover:text-olive transition">Heritage</a>
+            <a href="#services" class="hover:text-olive transition">Services</a>
+            <a href="#contact" class="hover:text-olive transition">Contact</a>
+        </div>
+        <a href="tel:03122027350" class="bg-olive text-white px-5 py-2 text-sm uppercase tracking-tighter">Call Now</a>
+    </nav>
 
-    <section id="about">
-        <h2>About Our Shop</h2>
-        <p>This is where you write your overview. Tell your customers about the passion behind your products and why they should visit you.</p>
-    </section>
-
-    <section id="photos">
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="your-photo1.jpg" alt="Product 1">
-            <img src="your-photo2.jpg" alt="Product 2">
-            <img src="your-photo3.jpg" alt="Store Front">
+    <section class="relative h-[90vh] flex items-center justify-center text-center px-4 overflow-hidden">
+        <div class="fade-in max-w-4xl">
+            <div class="inline-block border border-olive px-4 py-1 mb-6 rounded-full text-olive text-sm font-semibold tracking-widest uppercase">
+                ★ ★ ★ ★ ★ 5.0 Rated Excellence
+            </div>
+            <h1 class="text-6xl md:text-8xl mb-6">Woven with Prestige, <br><span class="italic text-olive">Rooted in Tradition.</span></h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Experience the finest textile craftsmanship from Tando Ghulām Ali. Where high-quality fabrics meet global garment standards.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#services" class="bg-ink text-white px-10 py-4 text-sm uppercase tracking-widest hover:bg-olive transition duration-500">View Gallery</a>
+                <a href="#about" class="border border-ink px-10 py-4 text-sm uppercase tracking-widest hover:bg-cream transition duration-500">Our History</a>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Visit Us</h2>
-        <p><strong>Address:</strong> 123 Main St, Your City</p>
-        <p><strong>Phone:</strong> (555) 000-0000</p>
-        <p><strong>Hours:</strong> Mon-Sat: 9am - 6pm</p>
+    <section id="about" class="py-24 bg-cream px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="aspect-[4/5] bg-gray-300 overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1558273109-604340ce93c4?auto=format&fit=crop&w=800&q=80" alt="Textile Craft" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-olive text-white p-8 hidden md:block">
+                    <p class="text-3xl italic">"Quality is a legacy."</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-5xl mb-6">The Legacy of <br>Tando Ghulām Ali</h2>
+                <p class="text-gray-700 leading-relaxed mb-6 font-light">
+                    Deep in the heart of Sindh, our workshop carries the rhythm of generations. We combine the soul of organic, local textures with the precision of modern garment engineering.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-8 font-light">
+                    Every thread sourced and every garment stitched passes through rigorous quality checks to ensure that "Heritage Threads" remains a name synonymous with luxury prestige.
+                </p>
+                <div class="h-[1px] w-20 bg-olive mb-4"></div>
+                <p class="uppercase tracking-widest text-xs font-bold">Established Quality</p>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        &copy; 2026 [Shop Name]. All rights reserved.
+    <section id="services" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-5xl mb-4">Mastered Services</h2>
+            <div class="h-1 w-20 bg-olive mx-auto"></div>
+        </div>
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-gray-100 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1524292332623-3a5a7506556a?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl">Fabric Manufacturing</h3>
+                <p class="text-gray-500 text-sm mt-2 font-light">Premium raw materials woven into perfection.</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-gray-100 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl">Garment Production</h3>
+                <p class="text-gray-500 text-sm mt-2 font-light">Precision tailoring for luxury retail standards.</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-4 bg-gray-100 aspect-square">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                </div>
+                <h3 class="text-2xl">Global Sourcing</h3>
+                <p class="text-gray-500 text-sm mt-2 font-light">Curating the finest textures from the region.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-ink text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <h2 class="text-4xl mb-6">Contact Us</h2>
+                <p class="text-gray-400 font-light mb-4">Connect with us for inquiries, bulk orders, or consultations.</p>
+            </div>
+            <div>
+                <h4 class="uppercase tracking-widest text-xs text-olive mb-4 font-bold">The Office</h4>
+                <p class="font-light text-gray-300">Tando Ghulām Ali, Sindh, Pakistan</p>
+                <p class="font-light text-gray-300 mt-2">Open: Mon-Sat (9AM - 6PM)</p>
+            </div>
+            <div>
+                <h4 class="uppercase tracking-widest text-xs text-olive mb-4 font-bold">Direct Line</h4>
+                <p class="text-2xl font-light">0312 2027350</p>
+                <p class="text-gray-400 text-sm mt-2">Available for WhatsApp and Calls</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-20 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 tracking-widest">
+            &copy; 2024 HERITAGE THREADS. ALL RIGHTS RESERVED.
+        </div>
     </footer>
 
 </body>
